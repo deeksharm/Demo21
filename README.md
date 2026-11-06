@@ -29,4 +29,5 @@ $env:Path += ";C:\Program Files\dotnet"
 dotnet --version
 
 #install function
+
 npm install -g azure-functions-core-tools@4
