@@ -41,32 +41,6 @@ dotnet --version
 
 **Expected output:** A version starting with `10.` (e.g., `10.0.100`).
 
-### Alternate Installation (PowerShell Script)
-
-Run each line **one at a time** in an **Administrator PowerShell** window:
-
-```powershell
-[Net.ServicePointManager]::SecurityProtocol = 3072
-```
-
-```powershell
-Invoke-WebRequest -Uri "https://dot.net/v1/dotnet-install.ps1" -OutFile "$env:TEMP\dotnet-install.ps1"
-```
-
-```powershell
-& "$env:TEMP\dotnet-install.ps1" -Channel 10.0 -InstallDir "C:\Program Files\dotnet"
-```
-
-```powershell
-$env:Path += ";C:\Program Files\dotnet"
-```
-
-```powershell
-dotnet --version
-```
-
----
-
 ## Step 3: Install Azure Functions Core Tools 4.x
 
 **Why:** Required to create, build, run, and debug Azure Functions locally.
@@ -97,10 +71,6 @@ func --version
 
 **Why:** The code editor used for all lab exercises.
 
-1. Download from: <https://code.visualstudio.com>
-2. Run the installer.
-3. During installation, check the option **"Add to PATH"**.
-4. Close and reopen the terminal.
 5. Verify:
 
 ```powershell
