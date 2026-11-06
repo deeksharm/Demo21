@@ -18,7 +18,8 @@ Write-Host "4. VS Code Extensions:" -ForegroundColor Yellow
 code --list-extensions | Select-String "csdevkit|rest-client"
 
 
-install .net SDK
+##install .net SDK
+
 [Net.ServicePointManager]::SecurityProtocol = 3072
 Invoke-WebRequest -Uri "https://dot.net/v1/dotnet-install.ps1" -OutFile "$env:TEMP\dotnet-install.ps1"
 & "$env:TEMP\dotnet-install.ps1" -Channel 10.0 -InstallDir "C:\Program Files\dotnet"
