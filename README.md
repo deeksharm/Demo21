@@ -25,4 +25,8 @@ Invoke-WebRequest -Uri "https://dot.net/v1/dotnet-install.ps1" -OutFile "$env:TE
 & "$env:TEMP\dotnet-install.ps1" -Channel 10.0 -InstallDir "C:\Program Files\dotnet"
 
 $env:Path += ";C:\Program Files\dotnet"
+
 dotnet --version
+
+#install function
+npm install -g azure-functions-core-tools@4
